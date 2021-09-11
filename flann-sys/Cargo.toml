@@ -9,5 +9,5 @@ documentation = "https://docs.rs/flann-sys/"
 version = "0.1.0"
 
 [build-dependencies]
-bindgen = "0.32.1"
-cmake = "0.1.35"
+bindgen = "0.59.1"
+cmake = "0.1.45"
