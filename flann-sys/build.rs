@@ -22,6 +22,7 @@ fn main() {
         Ok("linux") => {
             println!("cargo:rustc-link-lib=gomp");
             println!("cargo:rustc-link-lib=stdc++");
+            println!("cargo:rustc-link-lib=lz4");
         },
         _ => {},
     }
