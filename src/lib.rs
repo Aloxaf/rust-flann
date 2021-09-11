@@ -4,7 +4,7 @@
 #[macro_use]
 extern crate generic_array;
 #[macro_use]
-extern crate failure;
+extern crate thiserror;
 pub extern crate flann_sys as raw;
 extern crate itertools;
 
@@ -24,21 +24,15 @@ pub use parameters::Parameters;
 pub use slice_index::SliceIndex;
 pub use vec_index::VecIndex;
 
-#[derive(Copy, Clone, Debug, Fail)]
+#[derive(Copy, Clone, Debug, Error)]
 pub enum FlannError {
-    #[fail(
-        display = "expected {} dimensions in point, but got {} dimensions",
-        expected, got
-    )]
+    #[error("expected {} dimensions in point, but got {} dimensions", expected, got)]
     InvalidPointDimensionality { expected: usize, got: usize },
-    #[fail(
-        display = "expected number divisible by {}, but got {}, which is not",
-        expected, got
-    )]
+    #[error("expected number divisible by {}, but got {}, which is not", expected, got)]
     InvalidFlatPointsLen { expected: usize, got: usize },
-    #[fail(display = "FLANN failed to build index")]
+    #[error("FLANN failed to build index")]
     FailedToBuildIndex,
-    #[fail(display = "input must have at least one point")]
+    #[error("input must have at least one point")]
     ZeroInputPoints,
 }
 
