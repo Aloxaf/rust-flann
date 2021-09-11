@@ -1,9 +1,9 @@
 use itertools::{IntoChunks, Itertools};
-use raw;
-use FlannError;
-use Indexable;
-use Neighbor;
-use Parameters;
+use crate::raw;
+use crate::FlannError;
+use crate::Indexable;
+use crate::Neighbor;
+use crate::Parameters;
 
 pub struct SliceIndex<'a, T: Indexable> {
     index: raw::flann_index_t,

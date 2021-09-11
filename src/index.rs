@@ -1,11 +1,11 @@
 use generic_array::{ArrayLength, GenericArray};
 use itertools::{IntoChunks, Itertools};
-use raw;
+use crate::raw;
 use std::marker::PhantomData;
-use FlannError;
-use Indexable;
-use Neighbor;
-use Parameters;
+use crate::FlannError;
+use crate::Indexable;
+use crate::Neighbor;
+use crate::Parameters;
 
 pub struct Index<T: Indexable, N: ArrayLength<T>> {
     index: raw::flann_index_t,

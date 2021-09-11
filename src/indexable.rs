@@ -1,4 +1,4 @@
-use raw::{flann_index_t, FLANNParameters};
+use crate::raw::{flann_index_t, FLANNParameters};
 use std::fmt::Debug;
 use std::os::raw::{c_int, c_uint};
 

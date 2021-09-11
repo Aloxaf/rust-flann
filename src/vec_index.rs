@@ -1,7 +1,7 @@
-use slice_index::SliceIndex;
-use FlannError;
-use Indexable;
-use Parameters;
+use crate::slice_index::SliceIndex;
+use crate::FlannError;
+use crate::Indexable;
+use crate::Parameters;
 
 pub struct VecIndex<T: Indexable + 'static> {
     storage: Vec<Vec<T>>,

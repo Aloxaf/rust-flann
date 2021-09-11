@@ -1,5 +1,5 @@
-use enums::{Algorithm, CentersInit, Checks, LogLevel};
-use raw;
+use crate::enums::{Algorithm, CentersInit, Checks, LogLevel};
+use crate::raw;
 use std::os::raw::c_long;
 
 const DEFAULT_REBUILD_THRESHOLD: f32 = 2.0;

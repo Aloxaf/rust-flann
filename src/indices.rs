@@ -1,6 +1,6 @@
-use raw::{self, flann_index_t, FLANNParameters};
+use crate::raw::{self, flann_index_t, FLANNParameters};
 use std::os::raw::{c_int, c_uint};
-use Indexable;
+use crate::Indexable;
 
 macro_rules! impl_index {
     (

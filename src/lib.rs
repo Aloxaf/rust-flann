@@ -1,12 +1,9 @@
 #![deny(warnings)]
 
 #[allow(unknown_lints, unused_imports)]
-#[macro_use]
-extern crate generic_array;
-#[macro_use]
-extern crate thiserror;
-pub extern crate flann_sys as raw;
-extern crate itertools;
+
+use thiserror::Error;
+pub use flann_sys as raw;
 
 mod enums;
 mod index;
